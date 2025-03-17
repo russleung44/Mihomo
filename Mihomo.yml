@@ -1,4 +1,11 @@
 rule-providers:
+  advertising:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt
+    path: ./ruleset/advertising.yaml
+    behavior: domain
+    interval: 86400
+    format: text
+    type: http
   private:
     url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
     path: ./ruleset/private.yaml
@@ -55,16 +62,16 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  AppleTV:
+  apple_tv:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml
-    path: ./ruleset/AppleTV.yaml
+    path: ./ruleset/apple_tv.yaml
     behavior: classical
     interval: 86400
     format: yaml
     type: http	
-  Apple:
+  apple:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml
-    path: ./ruleset/Apple.yaml
+    path: ./ruleset/apple.yaml
     behavior: classical
     interval: 86400
     format: yaml
@@ -93,6 +100,13 @@ rule-providers:
   openai:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
     path: ./ruleset/openai.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  gemini:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+    path: ./ruleset/gemini.yaml
     behavior: classical
     interval: 86400
     format: yaml
@@ -126,20 +140,17 @@ proxy-groups:
       - JP
       - US
       - KR
-      
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/speedtest.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: SELECT
     type: select
-
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/speedtest.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: AUTO
     type: url-test
     interval: 300
-    
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT.png
     name: AIGC
     type: select
@@ -147,7 +158,6 @@ proxy-groups:
       - SG
       - JP
       - US
-      
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram.png
     name: Telegram
     type: select
@@ -159,7 +169,6 @@ proxy-groups:
       - JP
       - US
       - KR
-      
   - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/dark/Apple_TV.png
     name: AppleTV
     type: select
@@ -172,7 +181,6 @@ proxy-groups:
       - JP
       - US
       - KR
-      
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/apple.png
     name: Apple
     type: select
@@ -185,7 +193,6 @@ proxy-groups:
       - JP
       - US
       - KR
-      
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Youtube.png
     name: YouTube
     type: select
@@ -197,7 +204,6 @@ proxy-groups:
       - JP
       - US
       - KR
-      
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/google.png
     name: Google
     type: select
@@ -209,15 +215,13 @@ proxy-groups:
       - JP
       - US
       - KR
-      
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong.png
+  - name: HK
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
-    name: HK
     type: url-test
     interval: 300
-    
   - name: TW
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan.png
     include-all: true
@@ -225,31 +229,27 @@ proxy-groups:
     type: url-test
     interval: 300
     tolerance: 50
-    
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
+  - name: SG
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)新加坡|坡|狮城|SG|Singapore
-    name: SG
     type: url-test
     interval: 300
-    
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan.png
+  - name: JP
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
-    name: JP
     type: url-test
     interval: 300
-    
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US.png
+  - name: US
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)美国|USA|🇺🇸
-    name: US
     type: url-test
     interval: 300
-    
   - name: KR
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Korea.png
     include-all: true
@@ -258,7 +258,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     
-  - icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+  - name: GLOBAL
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     proxies:
@@ -275,16 +276,17 @@ proxy-groups:
       - JP
       - US
       - KR
-    name: GLOBAL
     type: select
 
 rules:
+  - "RULE-SET,advertising,REJECT"
   - "RULE-SET,private,DIRECT"
   - "RULE-SET,copilot,AIGC"
   - "RULE-SET,openai,AIGC"
   - "RULE-SET,claude,AIGC"
-  - "RULE-SET,AppleTV,AppleTV"
-  - "RULE-SET,Apple,Apple"
+  - "RULE-SET,gemini,AIGC"
+  - "RULE-SET,apple_tv,AppleTV"
+  - "RULE-SET,apple,Apple"
   - "RULE-SET,steam,PROXY"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram"
