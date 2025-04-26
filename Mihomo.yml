@@ -202,7 +202,7 @@ proxy-groups:
       - SG
       - JP
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Youtube.png
-    name: YouTube
+    name: Youtube
     type: select
     proxies:
       - SG    	
