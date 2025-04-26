@@ -202,7 +202,7 @@ proxy-groups:
       - SG
       - JP
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Youtube.png
-    name: Youtube
+    name: YouTube
     type: select
     proxies:
       - SG    	
@@ -277,7 +277,7 @@ rules:
   - "RULE-SET,apple_tv,AppleTV"
   - "RULE-SET,apple,Apple"
   - "RULE-SET,steam,Steam"
-  - "RULE-SET,youtube,Youtube"
+  - "RULE-SET,youTube,YouTube"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram"
   - "RULE-SET,google_domain,Google"
