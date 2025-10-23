@@ -247,6 +247,17 @@ proxy-groups:
       - JP
       - US
       - KR
+  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/spotify.png
+    name: Spotify
+    type: select
+    proxies:
+      - AUTO
+      - HK
+      - TW
+      - SG
+      - JP
+      - US
+      - KR      
   - name: GLOBAL 
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/quanqiu(2).png
     type: select
@@ -316,7 +327,7 @@ rules:
   - "RULE-SET,telegram,Telegram"
   - "RULE-SET,google,Google"
   - "RULE-SET,china,DIRECT"
-  - "RULE-SET,spotify,PROXY"
+  - "RULE-SET,spotify,Spotify"
   - "RULE-SET,riot,PROXY"
   - "RULE-SET,reddit,PROXY"
   - "RULE-SET,twitter,PROXY"
@@ -331,6 +342,13 @@ dns:
   prefer-h3: true
   ipv6: false
   enhanced-mode: fake-ip
+  respect-rules: true
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+    - https://doh.pub/dns-query
   fake-ip-range: 198.18.0.1/16
   # fake-ip-filter start
   fake-ip-filter:
@@ -370,13 +388,7 @@ dns:
     - stun.syncthing.net
     - stun.*
   # fake-ip-filter end
-  respect-rules: true
-  nameserver:
-    - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
-  proxy-server-nameserver:
-    - https://223.5.5.5/dns-query
-    - https://doh.pub/dns-query
+
 
 ### 域名嗅探
 sniffer:
