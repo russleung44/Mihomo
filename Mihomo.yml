@@ -175,7 +175,7 @@ proxy-groups:
     name: AUTO
     type: url-test
     interval: 300
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT.png
+  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/chatgpt(balck).png
     name: AIGC
     type: select
     proxies:
@@ -250,6 +250,18 @@ proxy-groups:
       - KR
   - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/spotify.png
     name: Spotify
+    type: select
+    proxies:
+      - AUTO
+      - SELECT
+      - HK
+      - TW
+      - SG
+      - JP
+      - US
+      - KR 
+  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github.png
+    name: GitHub
     type: select
     proxies:
       - AUTO
@@ -335,7 +347,7 @@ rules:
   - "RULE-SET,reddit,PROXY"
   - "RULE-SET,twitter,PROXY"
   - "RULE-SET,twitch,PROXY"
-  - "RULE-SET,github,PROXY"
+  - "RULE-SET,github,GitHub"
   - "RULE-SET,bilibili,DIRECT"
   - "MATCH,GLOBAL"
   
