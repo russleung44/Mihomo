@@ -148,7 +148,7 @@ rule-providers:
     type: http
     
 proxy-groups:
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/dog.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/airport.png
     include-all: false
     name: PROXY
     type: select
@@ -161,25 +161,25 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/speedtest.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/hailuo.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: SELECT
     type: select
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/speedtest.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/speedtest.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: AUTO
     type: url-test
     interval: 300
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/chatgpt(balck).png
+  - icon: https://chatgpt.com/favicon.ico
     name: AIGC
     type: select
     proxies:
       - SG
       - JP
       - US
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/telegram.png
     name: Telegram
     type: select
     proxies:
@@ -190,7 +190,7 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/icon/dark/Apple_TV.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/qure/color/Apple_TV.png
     name: AppleTV
     type: select
     proxies:
@@ -202,7 +202,7 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/apple.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/apple.png
     name: Apple
     type: select
     proxies:
@@ -212,7 +212,7 @@ proxy-groups:
       - TW
       - SG
       - JP
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/steam.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/steam.png
     name: Steam
     type: select
     proxies:
@@ -222,7 +222,7 @@ proxy-groups:
       - TW
       - SG
       - JP
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Youtube.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/youtube.png
     name: YouTube
     type: select
     proxies:
@@ -233,7 +233,7 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/google.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/google.png
     name: Google
     type: select
     proxies:
@@ -245,12 +245,12 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/spotify.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/spotify.png
     name: Spotify
     type: select
     proxies:
       - AUTO
-      - DIRECT
+	  - DIRECT
       - SELECT
       - HK
       - TW
@@ -258,12 +258,13 @@ proxy-groups:
       - JP
       - US
       - KR 
-  - icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/github.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/github.png
     name: GitHub
     type: select
     proxies:
       - AUTO
       - SELECT
+	  - DIRECT
       - HK
       - TW
       - SG
@@ -271,7 +272,7 @@ proxy-groups:
       - US
       - KR      
   - name: GLOBAL 
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/quanqiu(2).png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/global.png
     type: select
     proxies:
       - AUTO
@@ -283,42 +284,42 @@ proxy-groups:
       - SG
       - JP
   - name: HK
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/hk.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     type: url-test
     interval: 300
   - name: TW
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/tw.png
     include-all: true
     filter: (?i)台|新北|彰化|TW|Taiwan
     type: url-test
     interval: 300
     tolerance: 50
   - name: SG
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/sg.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     type: url-test
     interval: 300
   - name: JP
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/jp.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     type: url-test
     interval: 300
   - name: US
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/us.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)美国|USA|🇺🇸
     type: url-test
     interval: 300
   - name: KR
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Korea.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/kr.png
     include-all: true
     filter: (?i)KR|Korea|KOR|首尔|韩|韓
     type: url-test
@@ -430,5 +431,3 @@ tun:
     - tcp://any:53
   strict-route: true
   mtu: 1500
-  # 如果有使用zerotier或者headscale等，需要自己配置排除自己的网段
-  # route-exclude-address: ["192.168.110.0/24"]
