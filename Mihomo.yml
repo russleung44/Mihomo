@@ -250,7 +250,7 @@ proxy-groups:
     type: select
     proxies:
       - AUTO
-	  - DIRECT
+      - DIRECT
       - SELECT
       - HK
       - TW
@@ -264,7 +264,7 @@ proxy-groups:
     proxies:
       - AUTO
       - SELECT
-	  - DIRECT
+      - DIRECT
       - HK
       - TW
       - SG
