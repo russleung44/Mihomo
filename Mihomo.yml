@@ -270,7 +270,15 @@ proxy-groups:
       - SG
       - JP
       - US
-      - KR      
+      - KR    
+  - name: AD
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/advertising.png
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - AUTO
+      - SELECT
   - name: GLOBAL 
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/global.png
     type: select
@@ -325,10 +333,10 @@ proxy-groups:
     type: url-test
     interval: 300
     tolerance: 50
-
+ 
 
 rules:
-  - "RULE-SET,advertising,REJECT"
+  - "RULE-SET,advertising,AD"
   - "RULE-SET,privacy,DIRECT"
   - "RULE-SET,copilot,AIGC"
   - "RULE-SET,openai,AIGC"
