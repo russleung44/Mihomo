@@ -148,7 +148,7 @@ rule-providers:
     type: http
     
 proxy-groups:
-  - icon: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master//icon/color/vpn.png
+  - icon: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master//icon/qure/color/Qure.png
     include-all: false
     name: PROXY
     type: select
@@ -161,12 +161,12 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/sun.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Pig.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: SELECT
     type: select
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/surge.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Luffy.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     name: AUTO
@@ -179,7 +179,7 @@ proxy-groups:
       - SG
       - JP
       - US
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/telegram.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Telegram.png
     name: Telegram
     type: select
     proxies:
@@ -202,7 +202,7 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/apple.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple.png
     name: Apple
     type: select
     proxies:
@@ -212,7 +212,7 @@ proxy-groups:
       - TW
       - SG
       - JP
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/steam.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Steam.png
     name: Steam
     type: select
     proxies:
@@ -222,7 +222,7 @@ proxy-groups:
       - TW
       - SG
       - JP
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/youtube.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/YouTube.png
     name: YouTube
     type: select
     proxies:
@@ -233,7 +233,7 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/google.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Google.png
     name: Google
     type: select
     proxies:
@@ -245,7 +245,7 @@ proxy-groups:
       - JP
       - US
       - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/spotify.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Spotify.png
     name: Spotify
     type: select
     proxies:
@@ -258,7 +258,7 @@ proxy-groups:
       - JP
       - US
       - KR 
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/github.png
+  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/GitHub.png
     name: GitHub
     type: select
     proxies:
@@ -272,7 +272,7 @@ proxy-groups:
       - US
       - KR    
   - name: AD
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/adblock.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/AdWhite.png
     type: select
     proxies:
       - REJECT
@@ -280,7 +280,7 @@ proxy-groups:
       - AUTO
       - SELECT
   - name: GLOBAL 
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/global.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Global.png
     type: select
     proxies:
       - AUTO
@@ -292,42 +292,42 @@ proxy-groups:
       - SG
       - JP
   - name: HK
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/hk.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Hong_Kong.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     type: url-test
     interval: 300
   - name: TW
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/tw.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Taiwan.png
     include-all: true
     filter: (?i)台|新北|彰化|TW|Taiwan
     type: url-test
     interval: 300
     tolerance: 50
   - name: SG
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/sg.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Singapore.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     type: url-test
     interval: 300
   - name: JP
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/jp.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Japan.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     type: url-test
     interval: 300
   - name: US
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/us.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/United_States.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)美国|USA|🇺🇸
     type: url-test
     interval: 300
   - name: KR
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/kr.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Korea.png
     include-all: true
     filter: (?i)KR|Korea|KOR|首尔|韩|韓
     type: url-test
