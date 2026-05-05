@@ -36,29 +36,31 @@ SG-Filter = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|SGP
 JP-Filter = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)(\d+)?\b)))"
 KR-Filter = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea)(\d+)?\b)))"
 US-Filter = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|(\b(US|USA|United States)(\d+)?\b)))"
-Globe-Filter = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|通知|国内|地址|频道|无法|说明|使用|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+GLOBAL-Filter = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|通知|国内|地址|频道|无法|说明|使用|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 
 [Proxy Group]
 # 手动策略组
-Proxy = select,SG,JP,HK,TW,US,Globe,Select,img-url = https://iili.io/K0KvJv1.png
-YouTube = select,Proxy,SG,JP,HK,TW,Globe,img-url = https://iili.io/KQ67Yxa.png
-AI = select,SG,JP,US,Globe,img-url = https://iili.io/KQ8goOb.png
+Proxy = select,SG,JP,HK,TW,US,GLOBAL,Select,img-url = https://iili.io/K0KvJv1.png
+YouTube = select,Proxy,SG,JP,HK,TW,GLOBAL,img-url = https://iili.io/KQ67Yxa.png
+AI = select,SG,JP,US,GLOBAL,img-url = https://iili.io/KQ8goOb.png
 Apple = select,DIRECT,Proxy,img-url = https://iili.io/KyN99Nj.png
-Spotify = select,DIRECT,Proxy,SG,JP,HK,TW,Globe,Select,img-url = https://iili.io/KQXqSt9.png
-BiliBili = select,DIRECT,Proxy,HK,TW,Globe,img-url = https://iili.io/KQ4DCGI.png
-Select = select,Globe-Filter,img-url = https://iili.io/KjKWB5v.png
+Spotify = select,DIRECT,Proxy,SG,JP,HK,TW,GLOBAL,Select,img-url = https://iili.io/KQXqSt9.png
+BiliBili = select,DIRECT,Proxy,HK,TW,GLOBAL,img-url = https://iili.io/KQ4DCGI.png
+Steam = select,DIRECT,Proxy,HK,TW,GLOBAL,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Steam.png
+
+Select = select,GLOBAL-Filter,img-url = https://iili.io/KjKWB5v.png
 # --------------------------------
 # 兜底策略后备
-Final = select,Proxy,DIRECT,SG,JP,HK,TW,US,Globe,img-url = https://iili.io/KQWNHDQ.png
+Final = select,Proxy,DIRECT,SG,JP,HK,TW,US,BLOBAL,img-url = https://iili.io/KQWNHDQ.png
 
 # --------------------------------
 # 时延优选策略组
-SG = url-test,SG-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/sg.png
-JP = url-test,JP-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/jp.png
-HK = url-test,HK-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/hk.png
-TW = url-test,TW-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/tw.png
-US = url-test,US-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/us.png
-Globe = url-test,Globe-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/mini/us.png
+SG = url-test,SG-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Singapore.png
+JP = url-test,JP-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Japan.png
+HK = url-test,HK-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Hong_Kong.png
+TW = url-test,TW-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Taiwan.png
+US = url-test,US-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/United_States.png
+GLOBAL = url-test,GLOBAL-Filter,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Global.png
 # 自定义
 
 [Rule]
@@ -90,6 +92,7 @@ https://rule.kelee.one/Loon/YouTube.lsr, policy=YouTube, tag=Youtube, enabled=tr
 https://rule.kelee.one/Loon/Netflix.lsr, policy=Proxy, tag=Netflix, enabled=true
 https://rule.kelee.one/Loon/Disney.lsr, policy=Proxy, tag=Disney, enabled=true
 https://rule.kelee.one/Loon/Twitter.lsr, policy=Proxy, tag=Twitter, enabled=true
+https://rule.kelee.one/Loon/Steam.lsr, policy=Steam, tag=Steam, enabled=true
 
 https://rule.kelee.one/Loon/Facebook.lsr, policy=Proxy, tag=Facebook, enabled=true
 https://rule.kelee.one/Loon/Instagram.lsr, policy=Proxy, tag=Instagram, enabled=true
