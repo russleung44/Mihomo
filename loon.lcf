@@ -100,8 +100,8 @@ https://rule.kelee.one/Loon/Spotify.lsr, policy=Spotify, tag=Spotify, enabled=tr
 https://rule.kelee.one/Loon/Google.lsr, policy=Proxy, tag=Google, enabled=true
 https://rule.kelee.one/Loon/OneDrive.lsr, policy=Proxy, tag=OneDrive, enabled=true
 
-https://rule.kelee.one/Loon/Reddit.lsr, policy=PROXY, tag=Reddit, enabled=true
-https://rule.kelee.one/Loon/Twitch.lsr, policy=PROXY, tag=Twitch, enabled=true
+https://rule.kelee.one/Loon/Reddit.lsr, policy=Proxy, tag=Reddit, enabled=true
+https://rule.kelee.one/Loon/Twitch.lsr, policy=Proxy, tag=Twitch, enabled=true
 
 [Host]
 # AppStore下载
