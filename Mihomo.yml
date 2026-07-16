@@ -1,3 +1,191 @@
+proxy-groups:
+  - name: PROXY
+    icon: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master//icon/qure/color/Qure.png
+    include-all: false
+    type: select
+    proxies:
+      - AUTO
+      - SELECT
+      - JP
+      - HK
+      - TW
+      - SG
+      - US
+      - KR
+  - name: SELECT
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Pig.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    type: select
+  - name: AUTO
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Luffy.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    type: url-test
+    interval: 300
+  - name: AIGC
+    icon: https://chatgpt.com/favicon.ico
+    type: select
+    proxies:
+      - JP
+      - SG
+      - US
+  - name: Telegram
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Telegram.png
+    type: select
+    proxies:
+      - AUTO
+      - JP
+      - HK
+      - TW
+      - SG
+      - US
+      - KR
+  - name: AppleTV
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple_TV.png
+    type: select
+    proxies:
+      - AUTO
+      - DIRECT
+      - JP
+      - HK
+      - TW
+      - SG
+      - US
+      - KR
+  - name: Apple
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple.png
+    type: select
+    proxies:
+      - DIRECT
+      - AUTO
+      - HK
+      - TW
+      - SG
+      - JP
+  - name: Steam
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Steam.png
+    type: select
+    proxies:
+      - DIRECT
+      - AUTO
+      - JP
+      - HK
+      - TW
+      - SG
+  - name: YouTube
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/YouTube.png
+    type: select
+    proxies:
+      - JP
+      - AUTO
+      - SG
+      - HK
+      - TW
+      - US
+      - KR
+  - name: Google
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Google.png
+    type: select
+    proxies:
+      - AUTO
+      - SELECT
+      - JP
+      - HK
+      - TW
+      - SG
+      - US
+      - KR
+  - name: Spotify
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Spotify.png
+    type: select
+    proxies:
+      - AUTO
+      - DIRECT
+      - SELECT
+      - JP
+      - HK
+      - TW
+      - SG
+      - US
+      - KR
+  - name: GitHub
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/GitHub.png
+    type: select
+    proxies:
+      - JP
+      - AUTO
+      - SELECT
+      - DIRECT
+      - HK
+      - TW
+      - SG
+      - US
+      - KR
+  - name: AD
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/AdWhite.png
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+      - AUTO
+      - SELECT
+  - name: GLOBAL
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Global.png
+    type: select
+    proxies:
+      - AUTO
+      - JP
+      - SELECT
+      - DIRECT
+      - PROXY
+      - HK
+      - TW
+      - SG
+  - name: HK
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Hong_Kong.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
+    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
+    type: url-test
+    interval: 300
+  - name: TW
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Taiwan.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
+    filter: (?i)台|新北|彰化|TW|Taiwan
+    type: url-test
+    interval: 300
+    tolerance: 50
+  - name: SG
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Singapore.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
+    filter: (?i)新加坡|坡|狮城|SG|Singapore
+    type: url-test
+    interval: 300
+  - name: JP
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Japan.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
+    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    type: url-test
+    interval: 300
+  - name: US
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/United_States.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
+    filter: (?i)美国|USA|🇺🇸
+    type: url-test
+    interval: 300
+  - name: KR
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Korea.png
+    include-all: true
+    filter: (?i)KR|Korea|KOR|首尔|韩|韓
+    type: url-test
+    interval: 300
+    tolerance: 50
+
 rule-providers:
   advertising:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml
@@ -33,14 +221,14 @@ rule-providers:
     behavior: classical
     interval: 86400
     format: yaml
-    type: http	
+    type: http
   apple:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml
     path: ./ruleset/apple.yaml
     behavior: classical
     interval: 86400
     format: yaml
-    type: http	  
+    type: http
   bing:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml
     path: ./ruleset/bing.yaml
@@ -131,14 +319,14 @@ rule-providers:
     behavior: classical
     interval: 86400
     format: yaml
-    type: http  
+    type: http
   github:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
     path: ./ruleset/github.yaml
     behavior: classical
     interval: 86400
     format: yaml
-    type: http  
+    type: http
   bilibili:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml
     path: ./ruleset/bilibili.yaml
@@ -146,195 +334,6 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-    
-proxy-groups:
-  - icon: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master//icon/qure/color/Qure.png
-    include-all: false
-    name: PROXY
-    type: select
-    proxies:
-      - AUTO
-      - SELECT
-      - HK
-      - TW
-      - SG
-      - JP
-      - US
-      - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Pig.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
-    name: SELECT
-    type: select
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Luffy.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
-    name: AUTO
-    type: url-test
-    interval: 300
-  - icon: https://chatgpt.com/favicon.ico
-    name: AIGC
-    type: select
-    proxies:
-      - SG
-      - JP
-      - US
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Telegram.png
-    name: Telegram
-    type: select
-    proxies:
-      - AUTO
-      - HK
-      - TW
-      - SG
-      - JP
-      - US
-      - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple_TV.png
-    name: AppleTV
-    type: select
-    proxies:
-      - AUTO
-      - DIRECT
-      - HK
-      - TW
-      - SG
-      - JP
-      - US
-      - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple.png
-    name: Apple
-    type: select
-    proxies:
-      - DIRECT
-      - AUTO
-      - HK
-      - TW
-      - SG
-      - JP
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Steam.png
-    name: Steam
-    type: select
-    proxies:
-      - DIRECT
-      - AUTO
-      - HK
-      - TW
-      - SG
-      - JP
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/YouTube.png
-    name: YouTube
-    type: select
-    proxies:
-      - SG    	
-      - AUTO
-      - HK
-      - TW
-      - JP
-      - US
-      - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Google.png
-    name: Google
-    type: select
-    proxies:
-      - AUTO
-      - SELECT
-      - HK
-      - TW
-      - SG
-      - JP
-      - US
-      - KR
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Spotify.png
-    name: Spotify
-    type: select
-    proxies:
-      - AUTO
-      - DIRECT
-      - SELECT
-      - HK
-      - TW
-      - SG
-      - JP
-      - US
-      - KR 
-  - icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/GitHub.png
-    name: GitHub
-    type: select
-    proxies:
-      - AUTO
-      - SELECT
-      - DIRECT
-      - HK
-      - TW
-      - SG
-      - JP
-      - US
-      - KR    
-  - name: AD
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/AdWhite.png
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
-      - AUTO
-      - SELECT
-  - name: GLOBAL 
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Global.png
-    type: select
-    proxies:
-      - AUTO
-      - SELECT
-      - DIRECT
-      - PROXY
-      - HK
-      - TW
-      - SG
-      - JP
-  - name: HK
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Hong_Kong.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
-    filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
-    type: url-test
-    interval: 300
-  - name: TW
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Taiwan.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
-    filter: (?i)台|新北|彰化|TW|Taiwan
-    type: url-test
-    interval: 300
-    tolerance: 50
-  - name: SG
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Singapore.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
-    filter: (?i)新加坡|坡|狮城|SG|Singapore
-    type: url-test
-    interval: 300
-  - name: JP
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Japan.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
-    filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
-    type: url-test
-    interval: 300
-  - name: US
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/United_States.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|免费
-    filter: (?i)美国|USA|🇺🇸
-    type: url-test
-    interval: 300
-  - name: KR
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Korea.png
-    include-all: true
-    filter: (?i)KR|Korea|KOR|首尔|韩|韓
-    type: url-test
-    interval: 300
-    tolerance: 50
- 
 
 rules:
   - "RULE-SET,advertising,AD"
@@ -358,7 +357,7 @@ rules:
   - "RULE-SET,github,GitHub"
   - "RULE-SET,bilibili,DIRECT"
   - "MATCH,GLOBAL"
-  
+
 ### DNS配置
 dns:
   enable: true
@@ -411,7 +410,6 @@ dns:
     - stun.syncthing.net
     - stun.*
   # fake-ip-filter end
-
 
 ### 域名嗅探
 sniffer:
