@@ -1,6 +1,6 @@
 proxy-groups:
   - name: PROXY
-    icon: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master//icon/qure/color/Qure.png
+    icon: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/icon/qure/color/Proxy.png
     include-all: false
     type: select
     proxies:
@@ -13,18 +13,18 @@ proxy-groups:
       - US
       - KR
   - name: SELECT
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Pig.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     type: select
   - name: AUTO
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Luffy.png
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Auto.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     type: url-test
     interval: 300
   - name: AIGC
-    icon: https://chatgpt.com/favicon.ico
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Bot.png
     type: select
     proxies:
       - JP
