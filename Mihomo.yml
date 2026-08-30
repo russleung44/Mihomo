@@ -77,8 +77,8 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Steam.png
     type: select
     proxies:
-      - DIRECT
       - AUTO
+      - DIRECT
       - JP
       - HK
       - TW
