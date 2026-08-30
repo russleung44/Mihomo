@@ -2,31 +2,30 @@
 # Date: 2026-03-25 16:38:54
 
 [General]
-ip-mode=v4-only
-ipv6-vif=off
-dns-server=system
-sni-sniffing=true
-disable-stun=true
-dns-reject-mode=LoopbackIP
-domain-reject-mode=DNS
-udp-fallback-mode=REJECT
-wifi-access-http-port=7222
-wifi-access-socks5-port=7221
-allow-wifi-access=false
-interface-mode=auto
-test-timeout=5
-disconnect-on-policy-change=false
-internet-test-url=http://connectivitycheck.platform.hicloud.com/generate_204
-proxy-test-url=http://www.gstatic.com/generate_204
-resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
-geoip-url=https://geodata.kelee.one/Country-Masaiki.mmdb
-ipasn-url=https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
-skip-proxy=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
-bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+ip-mode = v4-only
+ipv6-vif = off
+dns-server = system
+sni-sniffing = true
+disable-stun = true
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+allow-wifi-access = false
+interface-mode = auto
+test-timeout = 5
+disconnect-on-policy-change = false
+internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url = http://www.gstatic.com/generate_204
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 
 [Proxy]
 
-[Remote Proxy]
 
 
 [Remote Filter]
@@ -43,7 +42,8 @@ GLOBAL-Filter = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|官网|客服|�
 Proxy = select,SG,JP,HK,TW,US,GLOBAL,Select,img-url = https://iili.io/K0KvJv1.png
 YouTube = select,Proxy,SG,JP,HK,TW,GLOBAL,img-url = https://iili.io/KQ67Yxa.png
 AI = select,SG,JP,US,GLOBAL,img-url = https://iili.io/KQ8goOb.png
-Apple = select,DIRECT,Proxy,img-url = https://iili.io/KyN99Nj.png
+Apple = select,DIRECT,Proxy,SG,JP,HK,TW,US,GLOBAL,img-url = https://iili.io/KyN99Nj.png
+iCloud = select,Proxy,DIRECT,SG,JP,HK,TW,US,GLOBAL,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/iCloud.png
 Spotify = select,DIRECT,Proxy,SG,JP,HK,TW,GLOBAL,Select,img-url = https://iili.io/KQXqSt9.png
 BiliBili = select,DIRECT,Proxy,HK,TW,GLOBAL,img-url = https://iili.io/KQ4DCGI.png
 Steam = select,DIRECT,Proxy,HK,TW,GLOBAL,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Steam.png
@@ -51,7 +51,7 @@ Steam = select,DIRECT,Proxy,HK,TW,GLOBAL,img-url = https://raw.githubusercontent
 Select = select,GLOBAL-Filter,img-url = https://iili.io/KjKWB5v.png
 # --------------------------------
 # 兜底策略后备
-Final = select,Proxy,DIRECT,SG,JP,HK,TW,US,BLOBAL,img-url = https://iili.io/KQWNHDQ.png
+Final = select,Proxy,DIRECT,SG,JP,HK,TW,US,img-url = https://iili.io/KQWNHDQ.png
 
 # --------------------------------
 # 时延优选策略组
@@ -81,6 +81,7 @@ https://rule.kelee.one/Loon/BiliBili.lsr, policy=BiliBili, tag=BiliBili, enabled
 
 # APPLE
 https://rule.kelee.one/Loon/AppleTV.lsr, policy=Proxy, tag=AppleTV, enabled=true
+https://rule.kelee.one/Loon/iCloud.lsr, policy=iCloud, tag=iCloud, enabled=true
 https://rule.kelee.one/Loon/Apple.lsr, policy=Apple, tag=Apple, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=Apple, tag=App Store, enabled=true
 
@@ -117,11 +118,12 @@ ssid:PHICOMM_5G = server:10.0.0.1
 [Script]
 
 [Plugin]
+https://kelee.one/Tool/Loon/Lpx/WeatherChina_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, policy=Proxy, pin=true, enabled=true
 
 
-https://raw.githubusercontent.com/ElyDemiurge/Loon-Plugins/main/bilibili/Lpx/Bilibili_filter.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/DidaPincheTaxi_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Snowball_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Dewu_remove_ads.lpx, enabled=true
@@ -161,7 +163,6 @@ https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, policy=Proxy, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=Proxy, enabled=true
@@ -178,7 +179,6 @@ https://kelee.one/Tool/Loon/Lpx/JiaXiaoDrive_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Tencent_Video_remove_ads.lpx, enabled=true
 
 # other
-https://raw.githubusercontent.com/mist-whisper/Loon/master/Lpx/Unicom_remove_ads.lpx, enabled=true
 https://github.com/fmz200/wool_scripts/raw/main/Loon/plugin/split/partF/FengChao.lpx, enabled=true
 https://github.com/BiliUniverse/Global/releases/latest/download/BiliBili.Global.plugin, enabled=false
 https://github.com/NSRingo/GeoServices/releases/latest/download/iRingo.Maps.plugin, enabled=true
@@ -192,3 +192,4 @@ https://github.com/BiliUniverse/ADBlock/releases/latest/download/BiliBili.ADBloc
 https://github.com/BiliUniverse/Enhanced/releases/latest/download/BiliBili.Enhanced.plugin, enabled=true
 
 [Mitm]
+
