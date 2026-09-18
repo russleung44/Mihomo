@@ -63,6 +63,18 @@ proxy-groups:
       - TW
       - SG
       - JP
+  - name: AppleMusic
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple_Music.png
+    type: select
+    proxies:
+      - AUTO
+      - DIRECT
+      - JP
+      - HK
+      - TW
+      - SG
+      - US
+      - KR
   - name: iCloud
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/iCloud.png
     type: select
@@ -239,6 +251,13 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+  apple_music:
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AppleMusic/AppleMusic.yaml
+    path: ./ruleset/apple_music.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
   icloud:
     url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/iCloud/iCloud.yaml
     path: ./ruleset/icloud.yaml
@@ -367,6 +386,7 @@ rules:
   - "RULE-SET,claude,AIGC"
   - "RULE-SET,gemini,AIGC"
   - "RULE-SET,apple_tv,AppleTV"
+  - "RULE-SET,apple_music,AppleMusic"
   - "RULE-SET,icloud,iCloud"
   - "RULE-SET,apple,Apple"
   - "RULE-SET,steam_cn,DIRECT"

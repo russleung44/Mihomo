@@ -43,6 +43,7 @@ Proxy = select,SG,JP,HK,TW,US,GLOBAL,Select,img-url = https://iili.io/K0KvJv1.pn
 YouTube = select,Proxy,SG,JP,HK,TW,GLOBAL,img-url = https://iili.io/KQ67Yxa.png
 AI = select,SG,JP,US,GLOBAL,img-url = https://iili.io/KQ8goOb.png
 Apple = select,DIRECT,Proxy,SG,JP,HK,TW,US,GLOBAL,img-url = https://iili.io/KyN99Nj.png
+AppleMusic = select,DIRECT,Proxy,SG,JP,HK,TW,US,GLOBAL,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple_Music.png
 iCloud = select,Proxy,DIRECT,SG,JP,HK,TW,US,GLOBAL,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/iCloud.png
 Spotify = select,DIRECT,Proxy,SG,JP,HK,TW,GLOBAL,Select,img-url = https://iili.io/KQXqSt9.png
 BiliBili = select,DIRECT,Proxy,HK,TW,GLOBAL,img-url = https://iili.io/KQ4DCGI.png
@@ -81,6 +82,7 @@ https://rule.kelee.one/Loon/BiliBili.lsr, policy=BiliBili, tag=BiliBili, enabled
 
 # APPLE
 https://rule.kelee.one/Loon/AppleTV.lsr, policy=Proxy, tag=AppleTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleMusic/AppleMusic.list, policy=AppleMusic, tag=AppleMusic, enabled=true
 https://rule.kelee.one/Loon/iCloud.lsr, policy=iCloud, tag=iCloud, enabled=true
 https://rule.kelee.one/Loon/Apple.lsr, policy=Apple, tag=Apple, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AppStore.lsr, policy=Apple, tag=App Store, enabled=true
