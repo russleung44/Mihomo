@@ -420,12 +420,12 @@ dns:
   fake-ip-range: 198.18.0.1/16
   # fake-ip-filter start
   fake-ip-filter:
-    - +.+m2m
-    - +.$injections.adguard.org
-    - +.$local.adguard.org
-    - +.+bogon
-    - +.+lan
-    - +.+localdomain
+    - +.m2m
+    - +.injections.adguard.org
+    - +.local.adguard.org
+    - +.bogon
+    - +.lan
+    - +.localdomain
     - +.home.arpa
     - +.10.in-addr.arpa
     - +.16.172.in-addr.arpa
