@@ -11,7 +11,6 @@ proxy-groups:
       - TW
       - SG
       - US
-      - KR
   - name: SELECT
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
     include-all: true
@@ -27,6 +26,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Bot.png
     type: select
     proxies:
+      - PROXY
       - JP
       - SG
       - US
@@ -34,17 +34,18 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Telegram.png
     type: select
     proxies:
+      - PROXY
       - AUTO
       - JP
       - HK
       - TW
       - SG
       - US
-      - KR
   - name: AppleTV
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple_TV.png
     type: select
     proxies:
+      - PROXY
       - AUTO
       - DIRECT
       - JP
@@ -52,13 +53,13 @@ proxy-groups:
       - TW
       - SG
       - US
-      - KR
   - name: Apple
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple.png
     type: select
     proxies:
       - DIRECT
       - AUTO
+      - PROXY
       - HK
       - TW
       - SG
@@ -67,6 +68,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Apple_Music.png
     type: select
     proxies:
+      - PROXY
       - AUTO
       - DIRECT
       - JP
@@ -74,13 +76,13 @@ proxy-groups:
       - TW
       - SG
       - US
-      - KR
   - name: iCloud
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/iCloud.png
     type: select
     proxies:
       - DIRECT
       - AUTO
+      - PROXY
       - HK
       - TW
       - SG
@@ -89,6 +91,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Steam.png
     type: select
     proxies:
+      - PROXY
       - AUTO
       - DIRECT
       - JP
@@ -99,17 +102,18 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/YouTube.png
     type: select
     proxies:
+      - PROXY
       - JP
       - AUTO
       - SG
       - HK
       - TW
       - US
-      - KR
   - name: Google
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Google.png
     type: select
     proxies:
+      - PROXY
       - AUTO
       - SELECT
       - JP
@@ -117,11 +121,11 @@ proxy-groups:
       - TW
       - SG
       - US
-      - KR
   - name: Spotify
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Spotify.png
     type: select
     proxies:
+      - PROXY
       - AUTO
       - DIRECT
       - SELECT
@@ -130,20 +134,19 @@ proxy-groups:
       - TW
       - SG
       - US
-      - KR
   - name: GitHub
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/GitHub.png
     type: select
     proxies:
       - JP
       - AUTO
+      - PROXY
       - SELECT
       - DIRECT
       - HK
       - TW
       - SG
       - US
-      - KR
   - name: AD
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/AdWhite.png
     type: select
@@ -152,15 +155,16 @@ proxy-groups:
       - DIRECT
       - AUTO
       - SELECT
+      - PROXY
   - name: GLOBAL
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Global.png
     type: select
     proxies:
+      - PROXY
       - AUTO
       - JP
       - SELECT
       - DIRECT
-      - PROXY
       - HK
       - TW
       - SG
@@ -200,13 +204,6 @@ proxy-groups:
     filter: (?i)美国|USA|🇺🇸
     type: url-test
     interval: 300
-  - name: KR
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Korea.png
-    include-all: true
-    filter: (?i)KR|Korea|KOR|首尔|韩|韓
-    type: url-test
-    interval: 300
-    tolerance: 50
 
 rule-providers:
   advertising:
