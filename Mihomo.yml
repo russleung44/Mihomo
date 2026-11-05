@@ -23,7 +23,7 @@ proxy-groups:
     type: url-test
     interval: 300
   - name: AIGC
-    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Bot.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     type: select
     proxies:
       - JP

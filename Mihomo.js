@@ -26,7 +26,7 @@ const proxyGroups = [
   },
   { name: "SELECT", icon: ICON + "Final.png", type: "select", "include-all": true, "exclude-filter": EXCLUDE },
   { name: "AUTO", icon: ICON + "Auto.png", type: "url-test", "include-all": true, "exclude-filter": EXCLUDE, interval: 300 },
-  { name: "AIGC", icon: ICON + "Bot.png", type: "select", proxies: ["JP", "PROXY", "SG", "US", "SELECT"] },
+  { name: "AIGC", icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png", type: "select", proxies: ["JP", "PROXY", "SG", "US", "SELECT"] },
   { name: "Telegram", icon: ICON + "Telegram.png", type: "select", proxies: ["PROXY", "AUTO", "JP", "HK", "TW", "SG", "US"] },
   { name: "AppleTV", icon: ICON + "Apple_TV.png", type: "select", proxies: ["PROXY", "AUTO", "DIRECT", "JP", "HK", "TW", "SG", "US"] },
   { name: "Apple", icon: ICON + "Apple.png", type: "select", proxies: ["DIRECT", "AUTO", "PROXY", "HK", "TW", "SG", "JP"] },
