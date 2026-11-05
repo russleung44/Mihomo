@@ -26,10 +26,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Bot.png
     type: select
     proxies:
-      - PROXY
       - JP
+      - PROXY
       - SG
       - US
+      - SELECT
   - name: Telegram
     icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Telegram.png
     type: select
