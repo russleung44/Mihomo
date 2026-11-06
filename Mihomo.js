@@ -78,7 +78,7 @@ const providerUrls = {
 const ruleProviders = Object.fromEntries(
   Object.entries(providerUrls).map(([key, url]) => [
     key,
-    { url, path: `./ruleset/${key}.yaml`, behavior: "classical", interval: 86400, format: "yaml", type: "http" },
+    { url: url.startsWith("https://") ? url : CDN + url, path: `./ruleset/${key}.yaml`, behavior: "classical", interval: 86400, format: "yaml", type: "http" },
   ])
 );
 
